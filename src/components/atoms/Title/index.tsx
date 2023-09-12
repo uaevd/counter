@@ -4,4 +4,8 @@ const Label = styled.h1`
     margin-bottom: 32px;
 `;
 
-export const Title = () => <Label>Title</Label>;
+interface Props {
+    readonly title: string;
+}
+
+export const Title = ({ title }: Props) => <Label>{title}</Label>;
