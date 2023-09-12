@@ -1,1 +1,7 @@
-export const Title = () => <div>Title</div>;
+import styled from '@emotion/styled';
+
+const Label = styled.h1`
+    margin-bottom: 32px;
+`;
+
+export const Title = () => <Label>Title</Label>;
