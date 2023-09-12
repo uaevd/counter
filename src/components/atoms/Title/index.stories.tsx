@@ -7,6 +7,9 @@ export default {
     component: Title,
 } as ComponentMeta<typeof Title>;
 
-const Template: ComponentStory<typeof Title> = () => <Title />;
+const Template: ComponentStory<typeof Title> = (args) => <Title {...args} />;
 
 export const Default = Template.bind({});
+Default.args = {
+    title: 'Counter App',
+};
