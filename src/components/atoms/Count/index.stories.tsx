@@ -7,6 +7,9 @@ export default {
     component: Count,
 } as ComponentMeta<typeof Count>;
 
-const Template: ComponentStory<typeof Count> = () => <Count />;
+const Template: ComponentStory<typeof Count> = (args) => <Count {...args} />;
 
 export const Default = Template.bind({});
+Default.args = {
+    value: 0,
+};
