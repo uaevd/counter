@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from '@emotion/styled';
 
 import { Button } from 'components/atoms/Button';
@@ -9,10 +10,13 @@ const Container = styled.div`
     justify-content: center;
 `;
 
-export const Counter = () => (
-    <Container>
-        <Button label="-" />
-        <Count value={0} />
-        <Button label="+" />
-    </Container>
-);
+export const Counter = () => {
+    const [count, setCount] = useState(0);
+    return (
+        <Container>
+            <Button label="-" onClick={() => setCount(count - 1)} />
+            <Count value={count} />
+            <Button label="+" onClick={() => setCount(count + 1)} />
+        </Container>
+    );
+};
